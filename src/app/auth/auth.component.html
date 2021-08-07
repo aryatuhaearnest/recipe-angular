@@ -1,0 +1,113 @@
+<div fxLayout="column">
+<ng-template appPlaceholder></ng-template>
+</div>
+
+<div fxLayout="column" *ngIf="isLoading" style="text-align: center;">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<!-- <div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+   
+    
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+      <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          ngModel
+          name="email"
+          required
+          email
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          ngModel
+          name="password"
+          required
+          minlength="6"
+        />
+      </div>
+      <div>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!authForm.valid"
+        >
+          {{ isLoginMode ? 'Login' : 'Sign Up' }}
+        </button>
+        |
+        <button class="btn btn-primary" (click)="onSwitchMode()" type="button">
+          Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div> -->
+<div fxLayout="column">
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading"   >
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Register and sign in from here!!</mat-card-title>
+    
+  </mat-card-header>
+ 
+  <mat-card-content >
+    
+    <div >
+      
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label> Email</mat-label>
+        <input 
+          type="email"
+          id="email"
+          ngModel
+          name="email"
+          required
+          email
+          matInput placeholder="Enter Your email address here">
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label> Password</mat-label>
+        <mat-hint>Not less than six characters </mat-hint>
+        <input 
+        type="password"
+        id="password"
+        ngModel
+        name="password"
+        required
+        minlength="6"
+        matInput placeholder="Enter Your password  here">
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+    type="submit"
+    [disabled]="!authForm.valid" 
+    mat-raised-button color="primary">{{ isLoginMode ? 'Login' : 'Sign Up' }}</button>
+    <button 
+    (click)="onSwitchMode()"
+    mat-raised-button color="primary">Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}</button>
+  </mat-card-actions>
+</mat-card>
+</form>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.new-recipe-form{
+width: 500px;
+}
+
+.example-card{
+  border: 1px solid red;
+  margin-top: 50px;
+}

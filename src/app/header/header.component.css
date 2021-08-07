@@ -1,0 +1,13 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+ 
+  span{
+      padding-right: 1rem;
+  }
+  ::ng-deep .manage-form{
+      max-height: 30vh;
+      
+      
+      
+  }

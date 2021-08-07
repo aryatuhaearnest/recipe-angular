@@ -1,0 +1,37 @@
+<!-- <a
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
+  </div>
+  <span class="pull-right">
+        <img
+          [src]="recipe.imagePath"
+          alt="{{ recipe.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
+      </span>
+</a> -->
+
+
+
+<a style="cursor: pointer; "
+[routerLink]="[index]"
+routerLinkActive="active" matTooltip="click to view recipe details">
+  <mat-card style="border: 1px solid red; margin-top: 50px;"> 
+    <mat-card-title>
+      {{ recipe.name }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ recipe.description }}
+    </mat-card-subtitle>
+    <mat-card-content>
+      <img mat-card-sm-image  [src]="recipe.imagePath"
+      alt="{{ recipe.name }}">
+    </mat-card-content>
+  </mat-card>
+
+</a>

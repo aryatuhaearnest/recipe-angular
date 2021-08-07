@@ -1,0 +1,61 @@
+<!-- <div >
+  <div >
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <ul >
+      <a
+        
+        style="cursor: pointer"
+        *ngFor="let ingredient of ingredients; let i = index"
+        (click)="onEditItem(i)"
+      >
+        {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+    </ul>
+  </div>
+</div> -->
+
+
+
+
+<!-- <div >
+  
+  <div >
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <h3 style="color:red">Click to delete or update An item</h3>
+    <mat-action-list  style="cursor: pointer"
+    *ngFor="let ingredient of ingredients; let i = index"
+    (click)="onEditItem(i)">
+
+    {{ ingredient.name }} ({{ ingredient.amount }})
+   
+    </mat-action-list>
+  </div>
+</div> -->
+
+
+
+
+
+
+<div>
+  <app-shopping-edit></app-shopping-edit>
+</div>
+<div style="width: 600px; margin-left: 220px; margin-top: 30px; border: 1px solid red;" > 
+
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let ingredient of ingredients; let i = index" (click)="onEditItem(i)">
+      {{ ingredient.name }} ({{ ingredient.amount }})
+    </mat-list-option>
+  </mat-selection-list>
+  
+  <p>
+    Options selected: {{shoes.selectedOptions.selected.length}}
+    <button mat-button>
+    <mat-icon matTooltip="delete selected" color="warn" (click)="onDeleteItems(shoes)">delete_forever </mat-icon>
+  </button>
+  </p>
+  
+
+</div>
