@@ -1,4 +1,4 @@
-.example-card {
+/* .example-card {
   max-width: 450px;
   margin-left: 300px;
   border: 1px solid red;
@@ -6,8 +6,21 @@
   
   
 }
+*/
 .form-field{
-  width: 400px;
-}
+  width:100%
+} 
 
+
+.example-card{
+  margin: 0 auto; 
+  float: none; 
+  width: fit-content;
+  margin-bottom: 10px;
+  margin-top: 80px;
+  border: 1px solid red;
+
+
+  
+}
 

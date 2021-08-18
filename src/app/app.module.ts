@@ -25,6 +25,7 @@ import { SuccessComponent } from './success/success.component';
     CoreModule,
     AuthModule,
     BrowserAnimationsModule,
+    FlexLayoutModule
     
   ],
   bootstrap: [AppComponent],

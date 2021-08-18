@@ -1,4 +1,4 @@
-input.ng-invalid.ng-touched,
+/* input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
   border: 1px solid red;
 }
@@ -7,13 +7,17 @@ textarea.ng-invalid.ng-touched {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
+} */
 
 .new-recipe-form{
-width: 500px;
+width: 100%;
 }
 
 .example-card{
   border: 1px solid red;
-  margin-top: 50px;
+  /* margin: 0 auto; 
+  float: none; 
+  margin-bottom: 10px;
+  margin-top: 70px; */
+  width: min-content;
 }

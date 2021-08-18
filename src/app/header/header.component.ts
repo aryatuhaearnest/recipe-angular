@@ -12,7 +12,7 @@ import { AuthService } from '../auth/auth.service';
 export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub: Subscription;
-  @Input() deviceXs: boolean;
+  // @Input() deviceXs: boolean;
 
   constructor(
     private dataStorageService: DataStorageService,

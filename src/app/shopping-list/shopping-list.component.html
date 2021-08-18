@@ -42,7 +42,7 @@
 <div>
   <app-shopping-edit></app-shopping-edit>
 </div>
-<div style="width: 600px; margin-left: 220px; margin-top: 30px; border: 1px solid red;" > 
+<div fxLayout="row" fxLayoutAlign="center" style="width:max-content; margin-top: 30px; border: 1px solid red;" > 
 
   <mat-selection-list #shoes>
     <mat-list-option *ngFor="let ingredient of ingredients; let i = index" (click)="onEditItem(i)">

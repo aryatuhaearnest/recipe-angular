@@ -38,33 +38,51 @@
   </div>
 </nav> -->
 
-<mat-toolbar color="primary" *ngIf="!deviceXs" [deviceXs]="deviceXs">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+
+<mat-toolbar color="primary" fxLayout="row">
+
+  <button mat-icon-button  (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
- 
-  <span routerLink="/">Recipe Book </span>
-  <div class="mat-navbar">
+  <div  fxFlex fxHide.lt-md="true">
+  <span  routerLink="/">Recipe Book </span>
     <a routerLinkActive="active" mat-button  routerLink="/recipes" *ngIf="isAuthenticated"> Recipes </a>
     <a routerLinkActive="active" mat-button  routerLink="/auth" *ngIf="!isAuthenticated"> Authenticate </a>
     <a routerLinkActive="active" mat-button  routerLink="/shopping-list" *ngIf="isAuthenticated"> Shopping List </a>
- 
-</div>
+  </div>
 
-  <span class="example-spacer"></span>
-  <mat-form-field  *ngIf="isAuthenticated" appearance="fill" class="manage-form" >
-    <mat-label>Manage</mat-label>
-    <mat-select>
-      <mat-option (click)="onSaveData()">
-       Save Data
-      </mat-option>
-      <mat-option (click)="onFetchData()">
-        Fetch Data
-       </mat-option>
-    </mat-select>
-  </mat-form-field>
 
-  <button *ngIf="isAuthenticated" mat-icon-button matTooltip="Logout" class="example-icon" aria-label="Example icon-button with share icon">
+<div fxLayout="row" fxLayoutAlign="end" >
+   
+    <mat-form-field fxFlex *ngIf="isAuthenticated" appearance="fill"  >
+      <mat-label>Manage</mat-label>
+      <mat-select>
+        <mat-option (click)="onSaveData()">
+         Save Data
+        </mat-option>
+        <mat-option (click)="onFetchData()">
+          Fetch Data
+         </mat-option>
+      </mat-select>
+    </mat-form-field>  
+
+
+
+  </div>
+  <button  *ngIf="isAuthenticated" mat-icon-button matTooltip="Logout" >
     <mat-icon   (click)="onLogout()">logout</mat-icon>
   </button>
 </mat-toolbar>
+
+
+
+<mat-sidenav #sidenav  mode="side">
+  <mat-nav-list fxLayout="row"  >
+
+    <a routerLinkActive="active" mat-button  routerLink="/recipes" *ngIf="isAuthenticated"> Recipes </a>
+    <a routerLinkActive="active" mat-button  routerLink="/auth" *ngIf="!isAuthenticated"> Authenticate </a>
+    <a routerLinkActive="active" mat-button  routerLink="/shopping-list" *ngIf="isAuthenticated"> Shopping List </a>
+
+  </mat-nav-list>
+</mat-sidenav>
+

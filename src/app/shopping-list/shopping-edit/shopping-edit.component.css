@@ -1,12 +1,12 @@
 .example-card {
-    max-width: 450px;
-    margin-left: 300px;
+    max-width: min-content;
+    /* margin-left: 300px; */
     border: 1px solid red;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     
     
   }
   .form-field{
-    width: 400px;
+    width: 100%;
   }
   

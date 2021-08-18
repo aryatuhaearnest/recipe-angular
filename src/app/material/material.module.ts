@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -27,7 +28,8 @@ const MaterialComponents =[
   MatInputModule,
   MatListModule,
   MatSnackBarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSidenavModule
 
 
 ];

@@ -1,4 +1,6 @@
 .example-card{
     border: 1px solid red;
     margin-top:  50px;
+    width: min-content;
+    float: none; 
 }

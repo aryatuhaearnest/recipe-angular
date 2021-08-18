@@ -109,15 +109,15 @@
 
 
 
-<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
-  <mat-card class="example-card">
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" fxLayout="row" >
+  <mat-card class="example-card" fxLayout="row"  fxLayoutAlign="center ">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Enter recipe details here </mat-card-title>
       
     </mat-card-header>
    
-    <mat-card-content >
+    <mat-card-content  >
       <mat-form-field appearance="fill" class="new-recipe-form">
         <mat-label>Name</mat-label>
         <input matInput  id="name" formControlName="name">    
@@ -137,7 +137,7 @@
         <textarea matInput id="description" formControlName="description"></textarea>
       </mat-form-field>
 
-      <div>
+      <div fxFlex>
         <div  formArrayName="ingredients">
           <div
             
